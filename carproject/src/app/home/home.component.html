@@ -1,0 +1,53 @@
+<h2 style="text-align: center;">AMAZING CARS WITH INCREDIBLE PRICES</h2>
+
+<nav id="mainNavbar" class="navbar navbar-dark navbar-expand-md py-0 fixed-top">
+  <a href="#" class="navbar-brand"><strong style="color: blue;">MYCAR</strong></a> <button class="navbar-toggler"
+    data-toggle="collapse" data-target="#navLinks"> <span class="navbar-toggler-icon"></span> </button>
+  <div class="collapse navbar-collapse" id="navLinks">
+    <ul class="navbar-nav">
+      <li class="nav-item"> <a href="" class="nav-link" routerLink="/login" style="color: blue;">LOGIN</a> </li>
+
+      <li class="nav-item"> <a href="" class="nav-link" (click)="logout()" style="color: blue;">LOGOUT</a> </li>
+
+    </ul>
+  </div>
+  <form class="form-inline search my-2 my-lg-0">
+    <input type="search" ngModel [(ngModel)]="text" (input)="searchCar()" name="text" placeholder="Search"
+      aria-label="Search">
+    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+
+  </form>
+</nav>
+
+<header>
+  <div id="indicators" class="carousel slide" data-ride="carousel">
+
+    <div class="carousel-inner" role="listbox">
+      <div class="carousel-item active" style="background-image: url('https://wallpapercave.com/wp/wp2671941.jpg') " >
+        <div class="carousel-caption d-none d-md-block">
+        </div>
+      </div>
+
+
+      <div class="row">
+        <div *ngFor="let car of carapp" class="col-3">
+          <div class="card" style="width: 18rem;">
+            <img [src]="car.imageUrl" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">{{car.id}}</h5>
+              <h5 class="card-title">{{car.name}}</h5>
+              <h5>{{car.companyName}}</h5>
+              <h5>{{car.fuelType}}</h5>
+              <h5>{{car.powerSteering}}</h5>
+              <h5>{{car.breakSystem}}</h5>
+              <h5>{{car.showroomPrice}}</h5>
+              <h5>{{car.onRoadPrice}}</h5>
+              <!-- <h5><img [src]="car.imageUrl" alt="" style="width: 70%; height: 70%;"></h5> -->
+              <h5>{{car.mileage}}</h5>
+              <h5>{{car.seatingCapacity}}</h5>
+              <h5>{{car.engineCapacity}}</h5>
+              <h5>{{car.gearType}}</h5>
+            </div>
+          </div>
+        </div>
+      </div>

@@ -1,0 +1,121 @@
+<!-- <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" >MyCar</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+                <a class="nav-link" href="#" routerLink="/home">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="#" routerLink="/addcarDetails">AddData <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="#" routerLink="/superadmin"> Super CarDetails<span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="#" routerLink="/updateCarDetails/:id">Update Details<span class="sr-only">(current)</span></a>
+            </li>
+        </ul>
+        <form class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            <button class="btn btn-outline-success my-2 my-sm-0"  (click)="logout()" type="submit">LOGOUT</button>
+
+
+        </form>
+    </div>
+</nav> -->
+
+<!-- <table>
+    <tr>
+        <th>Id</th>
+        <th>car Name</th>
+        <th>Car Company </th>
+        <th>Car FuelType</th>
+        <th>Car powerStreering</th>
+        <th>Car BreakSystem</th>
+        <th>Car ShowRoom</th>
+        <th>Car OnRoadPrice</th>
+        <th>Car ImageUrl</th>
+        <th>Car Mileage</th>
+        <th>Car SeatingCapacity</th>
+        <th>Car EngineCapacity</th>
+        <th>Car GearType</th>
+        <!-- <th>Admin</th> -->
+    <!-- </tr>  -->
+
+    <!-- <tr *ngFor="let r of  allDetails">
+        <td>{{r.id}}</td>
+        <td>{{r.name}}</td>
+        <td>{{r.companyName}}</td>
+        <td>{{r.fuelType}}</td>
+        <td>{{r.powerSteering}}</td>
+        <td>{{r.breakSystem}}</td>
+        <td>{{r.showroomPrice}}</td>
+        <td>{{r.onRoadPrice}}</td>
+        <td><img [src]="r.imageUrl" alt="" style="width: 70%; height: 70%;"></td>
+        <td>{{r.mileage}}</td>
+        <td>{{r.seatingCapacity}}</td>
+        <td>{{r.engineCapacity}}</td>
+        <td>{{r.gearType}}</td>
+        <!-- <td>{{r.adminId}}</td> -->
+        <!-- <br> -->
+
+    <!-- </tr> -->
+
+
+<!-- </table> -->
+<section class="content-info">
+    <div class="container paddings-mini">
+        <div class="row">
+            <div class="col-lg-12">
+                <table class="table-striped table-responsive table-hover result-point">
+                    <thead class="point-table-head">
+                        <tr>
+                            <th class="text-left">car Id</th>
+                            <th class="text-left">car Name</th>
+                            <th class="text-center">Car Company</th>
+                            <th class="text-center">Car FuelType</th>
+                            <th class="text-center">Car powerStreering</th>
+                            <th class="text-center">Car BreakSystem</th>
+                            <th class="text-center">Car ShowRoom</th>
+                            <th class="text-center">Car OnRoadPrice</th>
+                            <th class="text-center">Car Image</th>
+                            <th class="text-center">Car Mileage</th>
+                            <th class="text-center">Car SeatingCapacity</th>
+                            <th class="text-center">Car EngineCapacity</th>
+                            <th class="text-center">Car GearType</th>
+
+                        </tr>
+                    </thead>
+                    <tbody class="text-center">
+                        <tr *ngFor="let r of  allDetails">
+                            <td class="text-left number">{{r.id}}</td>
+                            <td class="text-left">{{r.name}}</td>
+                            <td>{{r.companyName}}</td>
+                            <td>{{r.fuelType}}</td>
+                            <td>{{r.powerSteering}}</td>
+                            <td>{{r.breakSystem}}</td>
+                            <td>{{r.showroomPrice}}</td>
+                            <td>{{r.onRoadPrice}}</td>
+                            <td class="imgage"><img [src]="r.imageUrl" alt="" style="height: 200px; width: 1000px;"></td>
+                            <td>{{r.mileage}}</td>
+                            <td>{{r.seatingCapacity}}</td>
+                            <td>{{r.engineCapacity}}</td>
+                            <td>{{r.gearType}}</td>
+                            
+                            
+                        </tr>    
+                    </tbody>  
+                </table>  
+            </div>
+
+
+        </div>
+    </div>
+
+</section>
